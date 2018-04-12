@@ -42,12 +42,14 @@
      (partial transform-keys lodash-kebab true)))
 
 (defn read-eml!
+  "Read a file and return the eml AST."
   [file-path]
-  (-> (io/slurp file-path)
-      (yml/safeLoad)
-      (js->clj :keywordize-keys true)
-      (clojurify-keys)))
+  (-> file-path
+      io/slurp
+      yml/safeLoad
+      js->clj
+      clojurify-keys))
 
 (defn print-ast-validation!
   [eml-ast]
-  (s/assert* :eml/ast eml-ast))
+  (print (s/explain-str :eml/ast eml-ast)))
