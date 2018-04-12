@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/paullucas/les-clj.git"
   },
+  "homepage": "https://github.com/paullucas/les-clj#readme",
   "keywords": [
     "cljs",
     "clj",
@@ -22,6 +23,7 @@
     }
   ],
   "homepage": "https://github.com/paullucas/les-clj#readme",
+  "license" : "MIT",
   "dependencies": {
     "js-yaml": "3.11.0",
     "lodash.kebabcase": "4.1.1"
