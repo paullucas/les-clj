@@ -22,13 +22,13 @@
       "name": "Andrea Richiardi"
     }
   ],
-  "homepage": "https://github.com/paullucas/les-clj#readme",
+  "bin": {
+    "les-cljs" : "./scripts/les-cljs"
+  },
   "license" : "MIT",
   "dependencies": {
     "js-yaml": "3.11.0",
-    "lodash.kebabcase": "4.1.1"
-  },
-  "devDependencies": {
+    "lodash.kebabcase": "4.1.1",
     "lumo-cljs": "1.8.0"
   }
 }
