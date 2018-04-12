@@ -15,11 +15,18 @@
   ],
   "contributors": [
     {
-      "name" : "Paul Lucas"
+      "name": "Paul Lucas"
     },
     {
-      "name" : "Andrea Richiardi"
+      "name": "Andrea Richiardi"
     }
   ],
-  "homepage": "https://github.com/paullucas/les-clj#readme"
+  "homepage": "https://github.com/paullucas/les-clj#readme",
+  "dependencies": {
+    "js-yaml": "3.11.0",
+    "lodash.kebabcase": "4.1.1"
+  },
+  "devDependencies": {
+    "lumo-cljs": "1.8.0"
+  }
 }
