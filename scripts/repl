@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -eu
+
+port=${@:-5044}
+
+cp=$(clojure -Srepro -C:dev -Spath)
+
+lumo -sfK -c "$cp" -n $port
