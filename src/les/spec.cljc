@@ -60,16 +60,16 @@
 (s/def :eml/stream (s/keys :req-un [:eml/name :eml/commands :eml/events]))
 (s/def :eml/streams (s/coll-of :eml/stream))
 
-(s/def :eml/subscribes-to (s/coll string?))
+(s/def :eml/subscribes-to (s/coll-of string?))
 
 (s/def :eml/readmodel (s/keys :req-un [:eml/name :eml/key :eml/subscribes-to]))
-(s/def :eml/readmodels (s/coll :eml/readmodel))
+(s/def :eml/readmodels (s/coll-of :eml/readmodel))
 
 ;; A BoundedContext is a context in which a ubiquitous language applies.
 (s/def :eml/context [:eml/name :eml/streams :eml/readmodels])
-(s/def :eml/contexts (s/coll :eml/context))
+(s/def :eml/contexts (s/coll-of :eml/context))
 
-(s/def :eml/rules (s/coll string?))
+(s/def :eml/rules (s/coll-of string?))
 (s/def :eml/parameter (s/keys :req-un [:eml/name :eml/type :eml/rules]))
 (s/def :emd/parameters (s/coll-of :emd/parameters))
 
@@ -79,7 +79,7 @@
 (s/def :eml/command (s/keys :req-un [:emd/name :emd/parameters :emd/postconditions]))
 (s/def :eml/commands (s/coll-of :emd/command))
 
-(s/def :emd/is-hashed bool?)
+(s/def :emd/is-hashed boolean?)
 (s/def :eml/property (s/keys :req-un [:eml/name :eml/type :eml/is-hashed]))
 (s/def :eml/properties (s/coll-of :eml/property))
 
