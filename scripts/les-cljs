@@ -2,4 +2,6 @@
 
 set -eu
 
-lumo -sdK -c src:dev dev/les/les_script.cljs $@
+cp=$(clojure -Srepro -A:dev -Spath)
+
+lumo -sdK -c "$cp" -m les.les-script $@
