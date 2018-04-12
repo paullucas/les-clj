@@ -1,0 +1,25 @@
+{
+  "name": "les-clj",
+  "version": "1.0.0",
+  "description": "Clojure les tooling and stuff",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paullucas/les-clj.git"
+  },
+  "keywords": [
+    "cljs",
+    "clj",
+    "clojure",
+    "lester",
+    "les"
+  ],
+  "contributors": [
+    {
+      "name" : "Paul Lucas"
+    },
+    {
+      "name" : "Andrea Richiardi"
+    }
+  ],
+  "homepage": "https://github.com/paullucas/les-clj#readme"
+}
