@@ -2,4 +2,4 @@
 
 set -eu
 
-lumo -sdK -c "$cp" dev/les/les_script.cljs $@
+lumo -sdK -c src:dev dev/les/les_script.cljs $@
