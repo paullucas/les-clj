@@ -23,12 +23,13 @@
     }
   ],
   "bin": {
-    "les-cljs" : "./scripts/les-cljs"
+    "les-cljs": "./scripts/les-cljs"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "dependencies": {
     "js-yaml": "3.11.0",
     "lodash.kebabcase": "4.1.1",
-    "lumo-cljs": "1.8.0"
+    "lumo-cljs": "1.8.0",
+    "partial.lenses": "^13.9.0"
   }
 }

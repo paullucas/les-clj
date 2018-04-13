@@ -157,6 +157,10 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+infestines@^0.4.5:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/infestines/-/infestines-0.4.7.tgz#dd323da309001665668f62d139561431b71cf256"
+
 is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
@@ -238,6 +242,12 @@ oauth-sign@~0.8.1:
 pako@~1.0.2:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
+
+partial.lenses@^13.9.0:
+  version "13.9.0"
+  resolved "https://registry.yarnpkg.com/partial.lenses/-/partial.lenses-13.9.0.tgz#6609188ddea058305b611e6dcf5ea1224243d45f"
+  dependencies:
+    infestines "^0.4.5"
 
 performance-now@^0.2.0:
   version "0.2.0"
