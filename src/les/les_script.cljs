@@ -1,5 +1,6 @@
 (ns les.les-script
-  (:require [cljs.tools.cli :as cli]
+  (:require [getopts]
+            [cljs.tools.cli :as cli]
             [clojure.spec.alpha :as s]
             [expound.alpha :as expound]
             [les.core :as les]))
@@ -13,29 +14,31 @@
 ;; CLI ;;
 ;;;;;;;;;
 
-(def cli-options
-  ;; An option with a required argument
+(def cli-summaries
   [["-v" "--validate-eml FILE" "The EML yaml file to validate"]
    ;; A boolean option defaulting to nil
    ["-h" "--help"]])
 
+(def cli-options
+  {:v "validate-eml"})
+
 (defn print-usage
-  [parsed-opts]
-  (println "Usage: les-cljs")
-  (println (:summary parsed-opts)))
+  [summaries]
+  (print "Usage: les-cljs" "\n")
+  (doseq [s summaries]
+    (apply print s)))
 
 (defn ^:export -main [& args]
-  (let [parsed-opts (cli/parse-opts cljs.core/*command-line-args* cli-options)
-        cli-opts (:options parsed-opts)]
-
+  (let [parsed-opts (apply getopts (clj->js
+                                    [(or cljs.core/*command-line-args* [])
+                                     {:alias cli-options}]))]
     (cond
-      (:errors cli-opts) (do (println (:errors cli-opts) "\n")
-                             (print-usage cli-opts))
-
-      (:validate-eml cli-opts)
-      (let [eml-ast (les/read-eml! (:validate-eml cli-opts))]
+      (:validate-eml parsed-opts)
+      (let [eml-ast (les/read-eml! (:validate-eml parsed-opts))]
         (les/print-ast-validation! eml-ast))
 
-      (:help cli-opts) (print-usage cli-opts))))
+      (:help parsed-opts) (print-usage cli-summaries)
+
+      :else (print-usage cli-summaries))))
 
 (set! *main-cli-fn* -main)
