@@ -1,29 +1,30 @@
 * Quick Start
-** Install Clojure
-*** Requirements
+** Validate an EML File
+#+BEGIN_SRC bash
+./scripts/les-cljs --validate-eml ./sampleEmlFile.yaml
+#+END_SRC
+** Install Dependencies
+*** Clojure
+**** Requirements
     - bash
     - curl
     - rlwrap
     - java
-*** Arch Linux
+**** Arch Linux
 #+BEGIN_SRC bash
 sudo pacman -S clojure
 #+END_SRC    
-*** Linux    
+**** Linux    
 #+BEGIN_SRC bash
 curl -O https://download.clojure.org/install/linux-install-1.9.0.358.sh
 chmod +x linux-install-1.9.0.358.sh
 sudo ./linux-install-1.9.0.358.sh
 #+END_SRC
-*** OSX
+**** OSX
 #+BEGIN_SRC bash
 brew install clojure
 #+END_SRC
-** Install NPM Dependencies
+*** NPM Packages
 #+BEGIN_SRC bash
 yarn install
-#+END_SRC
-** Validate an EML File
-#+BEGIN_SRC bash
-./scripts/les-cljs --validate-eml ./sampleEmlFile.yaml
 #+END_SRC
