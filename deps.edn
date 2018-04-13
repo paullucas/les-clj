@@ -1,6 +1,4 @@
 {:paths ["src"]
- :aliases {:dev {:extra-paths ["dev"]
-                 :extra-deps {org.clojure/tools.cli {:mvn/version "0.3.5" :exclusions [org.clojure/clojure]}}}}
  :deps {org.clojure/test.check {:mvn/version "0.10.0-alpha2" :exclusions [org.clojure/clojure]}
         expound {:git/url "https://github.com/bhb/expound"
                  :sha "59740c46c5a33cfa1257e563ec37b652eae692fd"

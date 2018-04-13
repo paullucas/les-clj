@@ -1,6 +1,5 @@
 (ns les.les-script
   (:require [getopts]
-            [cljs.tools.cli :as cli]
             [clojure.spec.alpha :as s]
             [expound.alpha :as expound]
             [les.core :as les]))
