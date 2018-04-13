@@ -30,17 +30,17 @@
 (defn eml->command-constructors [eml]
   (map #(command->constructor (:command %)) (commands eml)))
 
-(defn eval-event-constructors [eml]
+(defn eval-event-constructors! [eml]
   (map eval (eml->event-constructors eml)))
 
-(defn eval-command-constructors [eml]
+(defn eval-command-constructors! [eml]
   (map eval (eml->command-constructors eml)))
 
-(defn clj->io [xs]
+(defn clj->io! [xs]
   (map (fn [x] (fs/appendFileSync "./clj-output.cljs" (str x "\n"))) xs))
 
-(defn constructors->io []
-  (clj->io (concat '("\n;; Events\n")
-                   (eml->event-constructors eml)
-                   '("\n;; Commands\n")
-                   (eml->command-constructors eml))))
+(defn constructors->io! []
+  (clj->io! (concat '("\n;; Events\n")
+                    (eml->event-constructors eml)
+                    '("\n;; Commands\n")
+                    (eml->command-constructors eml))))
