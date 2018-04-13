@@ -1,0 +1,15 @@
+{:main les.les-script
+ :output-to "out/les-cljs-unbundled.js"
+ :output-dir "out"
+ :optimizations :simple
+ :source-map "out/les-cljs-unbundled.js.map"
+ :source-map-timestamp false
+ :target :nodejs
+ :static-fns true
+ :fn-invoke-direct true
+ :compiler-stats true
+ :install-deps false
+ :npm-deps {:getopts "2.0.6",
+            :js-yaml "3.11.0",
+            :lodash.kebabcase "4.1.1",
+            :partial.lenses "13.9.0"}}

@@ -38,7 +38,10 @@
     "getopts": "2.0.6",
     "js-yaml": "3.11.0",
     "lodash.kebabcase": "4.1.1",
-    "lumo-cljs": "1.8.0",
-    "partial.lenses": "^13.9.0"
+    "partial.lenses": "13.9.0"
+  },
+  "devDependencies": {
+    "browserify": "16.2.0",
+    "uglify": "0.1.5"
   }
 }

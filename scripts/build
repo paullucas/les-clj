@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -xeuo pipefail
+
+clojure -Srepro -R:cljs-jvm -m "cljs.main" -v -co "cljsc.edn" -c les.les-script

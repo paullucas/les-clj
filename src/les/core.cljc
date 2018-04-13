@@ -1,10 +1,10 @@
 (ns les.core
   (:require #?@(:cljs [[js-yaml :as yml]
-                       [lumo.io :as io]
+                       fs
                        [lodash.kebabcase :as lodash-kebab]])
-            [expound.alpha :as expound]
             [clojure.spec.alpha :as s]
             [clojure.walk :as walk]
+            [expound.alpha :as expound]
             [les.spec]))
 
 (defn- apply-case
@@ -45,7 +45,7 @@
   "Read a file and return the eml AST."
   [file-path]
   (-> file-path
-      io/slurp
+      fs/readFileSync
       yml/safeLoad
       js->clj
       clojurify-keys))
