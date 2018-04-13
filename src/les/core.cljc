@@ -1,11 +1,13 @@
 (ns les.core
   (:require #?@(:cljs [[js-yaml :as yml]
-                       fs
                        [lodash.kebabcase :as lodash-kebab]])
             [clojure.spec.alpha :as s]
             [clojure.walk :as walk]
             [expound.alpha :as expound]
             [les.spec]))
+
+#?(:cljs
+   (def fs (js/require "fs")))
 
 (defn- apply-case
   "Apply case function to x, optionally transforming string to keywords if
@@ -45,7 +47,7 @@
   "Read a file and return the eml AST."
   [file-path]
   (-> file-path
-      fs/readFileSync
+      fs.readFileSync
       yml/safeLoad
       js->clj
       clojurify-keys))
