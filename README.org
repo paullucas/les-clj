@@ -2,7 +2,15 @@
 ** Validate an EML File
 #+BEGIN_SRC bash
 ./scripts/les-cljs --validate-eml ./sampleEmlFile.yaml
+
+Usage: les-cljs
+
+-v --validate-eml FILE The EML yaml file to validate
+-e --eml-to-edn FILE Convert EML yaml file to EDN
+-p --pretty-print Pretty prints the output
+-h --help
 #+END_SRC
+
 ** Install Dependencies
 *** Clojure
 **** Requirements
@@ -13,13 +21,13 @@
 **** Arch Linux
 #+BEGIN_SRC bash
 sudo pacman -S clojure
-#+END_SRC    
-**** Linux    
+#+END_SRC
+**** Linux
 #+BEGIN_SRC bash
 curl -O https://download.clojure.org/install/linux-install-1.9.0.358.sh
 chmod +x linux-install-1.9.0.358.sh
 sudo ./linux-install-1.9.0.358.sh
-#+END_SRC
+#+END_SEC
 **** OSX
 #+BEGIN_SRC bash
 brew install clojure
