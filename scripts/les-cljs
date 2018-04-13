@@ -4,4 +4,4 @@ set -eu
 
 cp=$(clojure -Srepro -A:dev -Spath)
 
-./node_modules/.bin/lumo -sdK -c "$cp" dev/les/les_script.cljs $@
+lumo -sdK -c "$cp" -m les.les-script $@
