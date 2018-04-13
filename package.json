@@ -11,6 +11,7 @@
     "cljs",
     "clj",
     "clojure",
+    "clojurescript",
     "lester",
     "les"
   ],
@@ -19,12 +20,19 @@
       "name": "Paul Lucas"
     },
     {
-      "name": "Andrea Richiardi"
+      "name": "Andrea Richiardi",
+      "email": "a.richiardi.work@gmail.com"
     }
   ],
   "bin": {
     "les-cljs": "./scripts/les-cljs"
   },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*"
+  ],
   "license": "MIT",
   "dependencies": {
     "js-yaml": "3.11.0",
