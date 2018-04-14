@@ -35,7 +35,7 @@
 
 (defn ^:export -main [& args]
   (let [parsed-opts (-> (apply getopts (clj->js
-                                        [(or cljs.core/*command-line-args* [])
+                                        [(or (drop 2 process.argv) [])
                                          {:alias cli-options}]))
                         (js->clj :keywordize-keys true))]
     (cond

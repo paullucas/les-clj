@@ -2,4 +2,10 @@
 
 set -xeuo pipefail
 
-clojure -Srepro -R:cljs-jvm -m "cljs.main" -v -co "cljsc.edn" -c les.les-script
+# clojure -Srepro -R:cljs-jvm -m "cljs.main" -v -co "cljsc.edn" -c les.les-script
+
+COMPILED_PATH="out/les-cljs-unbundled.js"
+BUNDLED_PATH="les-cljs.js"
+
+yarn -s browserify --node --standalone index $COMPILED_PATH \
+  | yarn -s uglifyjs -o $BUNDLED_PATH
