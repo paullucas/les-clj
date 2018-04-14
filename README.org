@@ -1,17 +1,21 @@
 * Quick Start
+** CLI Overview
+| Alias | Flag           | Input                     | Description             |
+| -v    | --validate-eml | EML yaml file to validate | Validate EML            |
+| -e    | --eml-to-edn   | EML yaml file to convert  | Convert EML to EDN      |
+| -p    | --pretty-print | None                      | Pretty print the output |
+| -h    | --help         | None                      | Help                    |
 ** Validate an EML File
 #+BEGIN_SRC bash
-./scripts/les-cljs --validate-eml ./sampleEmlFile.yaml
-
-Usage: les-cljs
-
--v --validate-eml FILE The EML yaml file to validate
--e --eml-to-edn FILE Convert EML yaml file to EDN
--p --pretty-print Pretty prints the output
--h --help
+node ./les-cljs.js --validate-eml ./sampleEmlFile.yaml
 #+END_SRC
-
-** Install Dependencies
+** Convert an EML File to EDN
+#+BEGIN_SRC bash
+node ./les-cljs.js --eml-to-edn ./sampleEmlFile.yaml
+#+END_SRC
+** User Dependencies
+*** Node.js
+** Dev Dependencies
 *** Clojure
 **** Requirements
     - bash
