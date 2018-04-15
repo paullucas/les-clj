@@ -9,7 +9,7 @@ if [[ ! "$first_arg" =~ "no-compile" ]]; then
 fi
 
 COMPILED_PATH="out/les-cljs-unbundled.js"
-BUNDLED_PATH="les-cljs.js"
+BUNDLED_PATH="./bin/les-cljs.js"
 
 yarn -s browserify --node --standalone index $COMPILED_PATH \
   | yarn -s uglifyjs --preamble '#!/usr/bin/env node' -o $BUNDLED_PATH

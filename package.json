@@ -25,7 +25,7 @@
     }
   ],
   "bin": {
-    "les-cljs": "les-cljs.js"
+    "les-cljs": "./bin/les-cljs.js"
   },
   "directories": {
     "lib": "src"
