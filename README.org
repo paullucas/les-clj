@@ -1,15 +1,15 @@
 * Quick Start
 ** Install
 #+BEGIN_SRC bash
-npm install paullucas/les-clj
+yarn install paullucas/les-clj
 #+END_SRC
 ** Validate an EML File
 #+BEGIN_SRC bash
-node ./les-cljs.js --validate-eml ./sampleEmlFile.yaml
+yarn les-cljs --validate-eml ./sampleEmlFile.yaml
 #+END_SRC
 ** Convert an EML File to EDN
 #+BEGIN_SRC bash
-node ./les-cljs.js --eml-to-edn ./sampleEmlFile.yaml
+yarn les-cljs --eml-to-edn ./sampleEmlFile.yaml
 #+END_SRC
 
 ** CLI Overview
