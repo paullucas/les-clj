@@ -1,10 +1,8 @@
 * Quick Start
-** CLI Overview
-| Alias | Flag           | Input                     | Description             |
-| -v    | --validate-eml | EML yaml file to validate | Validate EML            |
-| -e    | --eml-to-edn   | EML yaml file to convert  | Convert EML to EDN      |
-| -p    | --pretty-print | None                      | Pretty print the output |
-| -h    | --help         | None                      | Help                    |
+** Install
+#+BEGIN_SRC bash
+npm install paullucas/les-clj
+#+END_SRC
 ** Validate an EML File
 #+BEGIN_SRC bash
 node ./les-cljs.js --validate-eml ./sampleEmlFile.yaml
@@ -13,6 +11,13 @@ node ./les-cljs.js --validate-eml ./sampleEmlFile.yaml
 #+BEGIN_SRC bash
 node ./les-cljs.js --eml-to-edn ./sampleEmlFile.yaml
 #+END_SRC
+
+** CLI Overview
+| Alias | Flag           | Input                     | Description             |
+| -v    | --validate-eml | EML yaml file to validate | Validate EML            |
+| -e    | --eml-to-edn   | EML yaml file to convert  | Convert EML to EDN      |
+| -p    | --pretty-print | None                      | Pretty print the output |
+| -h    | --help         | None                      | Help                    |
 ** User Dependencies
 *** Node.js
 ** Dev Dependencies
